@@ -1,0 +1,6 @@
+add_library(TemperatureControllerLib TemperatureController.cpp ConcreteHeatingDevice.cpp ConcreteCoolingDevice.cpp ConcreteTemperatureSensor.cpp)
+
+target_include_directories(TemperatureControllerLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+add_executable(TemperatureController main.cpp)
+target_link_libraries(TemperatureController TemperatureControllerLib)
